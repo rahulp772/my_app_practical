@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Login App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Welcome to the Social Login App</h1>
+        <% if (user) { %>
+            <p>Welcome, <%= user.name %></p>
+            <a href="/users" class="btn btn-primary">View Users</a>
+            <a href="/logout" class="btn btn-danger">Logout</a>
+        <% } else { %>
+            <a href="/auth/google" class="btn btn-primary mt-3">Login with Google</a>
+        <% } %>
+    </div>
+</body>
+</html>
